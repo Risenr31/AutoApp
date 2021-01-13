@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProblemStudent"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Успеваемость студентов" Height="600" Width="1000">
+    <Grid Margin="0,0,-94,-52">
+        <ListView HorizontalAlignment="Left" Height="342" VerticalAlignment="Top" Width="312" Margin="614,88,0,0" SelectionChanged="ListView_SelectionChanged">
+
+
+
+        </ListView>
+        <Label Content="Проблемные студенты" HorizontalAlignment="Left" Height="34" Margin="710,26,0,0" VerticalAlignment="Top" Width="144"/>
+        <Button Content="Показать" HorizontalAlignment="Left" Height="34" Margin="78,468,0,0" VerticalAlignment="Top" Width="144" Click="Button_Click"/>
+        <Calendar HorizontalAlignment="Left" Height="180" Margin="362,104,0,0" VerticalAlignment="Top" Width="198"/>
+        <Button Content="Отправить в деканат" HorizontalAlignment="Left" Height="34" Margin="726,468,0,0" VerticalAlignment="Top" Width="142"/>
+        <ListView HorizontalAlignment="Left" Height="342" Margin="26,88,0,0" VerticalAlignment="Top" Width="294">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Студенты" HorizontalAlignment="Left" Margin="95,26,0,0" VerticalAlignment="Top" Height="34" Width="102"/>
+        <Button Content="Составить отчёт" HorizontalAlignment="Left" Height="66" Margin="378,364,0,0" VerticalAlignment="Top" Width="166"/>
+
+
+
     </Grid>
 </Window>
