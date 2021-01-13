@@ -1,0 +1,15 @@
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent.csprojAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\MainWindow.g.cs
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\App.g.cs
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent_MarkupCompile.cache
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent_MarkupCompile.lref
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\bin\Debug\ProblemStudent.exe.config
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\bin\Debug\ProblemStudent.exe
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\bin\Debug\ProblemStudent.pdb
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\MainWindow.baml
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent.g.resources
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent.csproj.GenerateResource.cache
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent.exe
+C:\Users\HP\Documents\GitHub\AutoApp\ProblemStudent\obj\Debug\ProblemStudent.pdb

@@ -8,7 +8,7 @@ namespace ProblemStudent.Kontroller
 {
     class Check
     {
-        public static string Progress_check(double[] marks, bool[] attendance, string name)
+        public static string Progress_check(double[] marks, char[] attendance, string name)
         {
                 double avgM = 0;
                 int avgA = 0;
@@ -16,9 +16,11 @@ namespace ProblemStudent.Kontroller
                     avgM += marks[i];
                 avgM /= marks.Length;
                 for (int i = 0; i <= attendance.Length; i++)
-                    if (attendance[i] == true) avgA++;
-                if ((avgM < 3) && (avgA < (attendance.Length / 2)))
-                    return name; else return null;
+                    if (attendance[i] == '+') avgA++;
+            if ((avgM < 3) && (avgA < (attendance.Length / 2))) return name + " звонить родителям";
+            else if (avgM < 3) return name + " плохие оценки";
+            else if (avgA < (attendance.Length / 2)) return name + " плохая посещаемость";
+            else return null;
         }
     }
 }
