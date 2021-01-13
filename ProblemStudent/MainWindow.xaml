@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProblemStudent"
         mc:Ignorable="d"
         Title="Успеваемость студентов" Height="600" Width="1000">
-    <Grid Margin="0,0,-94,-52">
+    <Grid Margin="0,0,-6.4,-0.6">
         <ListView HorizontalAlignment="Left" Height="342" VerticalAlignment="Top" Width="312" Margin="614,88,0,0" SelectionChanged="ListView_SelectionChanged">
 
 
