@@ -37,6 +37,11 @@ namespace ProblemStudent
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            AllStudent.Items.Clear();
+            names.Clear();
+            groups.Clear();
+            marks.Clear();
+            poseschenie.Clear();
             FileStream file1 = new FileStream("Lerner.txt", FileMode.Open, FileAccess.Read);
             StreamReader reader1 = new StreamReader(file1);
             while (!reader1.EndOfStream)
@@ -78,30 +83,32 @@ namespace ProblemStudent
             if (names.Count == 0) { }
             else
             {
+                StudentList.Clear();
+                ProblemSt.Clear();
+                PrSt.ItemsSource = default;
+                PrSt.Items.Clear();
                 for (int i = 0; i < names.Count; i++)
                 {
                     string s = marks[i];
-                    char[] a = s.ToCharArray();
-                    int[] o = new int[marks[i].Length];
-                    for (int g = 0; g < marks[i].Length; g++)
-                        o[g] = Convert.ToInt32(a[g]);
-
-
+                    int n = s.Length / 2 + 1;
+                    //char[] a = s.ToCharArray();
+                    int[] o = new int[n];
+                    string[] odd = new string[n];
+                    odd = s.Split(' ');
+                    for (int j = 0; j < n; j++)
+                        o[j] = Convert.ToInt32(odd[j]);
 
                     string p = poseschenie[i];
                     char[] l = p.ToCharArray();
-
-
-
 
                     StudentList.Add(item: new Student() { Name = names[i], NomerGruppi = groups[i], Poseshcaemost = l, Ocenki = o });
                 }
                 for (int i = 0; i < StudentList.Count; i++)
                 {
-                    if ((Check.Progress_check(StudentList[i].Ocenki, StudentList[i].Poseshcaemost, StudentList[i].Name)) != null)
-                        ProblemSt.Add(Check.Progress_check(StudentList[i].Ocenki, StudentList[i].Poseshcaemost, StudentList[i].Name));
-                    PrSt.ItemsSource = ProblemSt;
+                    if (Check.Progress_check(StudentList[i].Ocenki, StudentList[i].Poseshcaemost, StudentList[i].Name) != null)
+                    ProblemSt.Add(Check.Progress_check(StudentList[i].Ocenki, StudentList[i].Poseshcaemost, StudentList[i].Name));
                 }
+                PrSt.ItemsSource = ProblemSt;
             }
         }
 
