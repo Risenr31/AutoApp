@@ -11,7 +11,11 @@ namespace ProblemStudent.Modells
         string _name, _nomerGruppi;
         int[] _ocenki;
         char[] _poseshcaemost;
-        public Student(string Name, string NomerGruppi, char[] Poseshcaemost, int[] Ocenki)
+        public string Name;
+        public string NomerGruppi;
+        public char[] Poseshcaemost;
+        public int[] Ocenki;
+        public Student()
         {
             _name = Name;
             _nomerGruppi = NomerGruppi;
