@@ -106,7 +106,7 @@ namespace ProblemStudent
                 for (int i = 0; i < StudentList.Count; i++)
                 {
                     if (Check.Progress_check(StudentList[i].Ocenki, StudentList[i].Poseshcaemost, StudentList[i].Name) != null)
-                    ProblemSt.Add(Check.Progress_check(StudentList[i].Ocenki, StudentList[i].Poseshcaemost, StudentList[i].Name));
+                        ProblemSt.Add(Check.Progress_check(StudentList[i].Ocenki, StudentList[i].Poseshcaemost, StudentList[i].Name));
                 }
                 PrSt.ItemsSource = ProblemSt;
             }
@@ -123,6 +123,43 @@ namespace ProblemStudent
                     Writer.WriteLine(ProblemSt[i]);
                 Writer.Close();
                 File.Close();
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if ((StName.Text == "") || (StGr.Text == "") || (StOc.Text == "") || (StPo.Text == ""))
+                MessageBox.Show("Проверьте правильность заполнения окон");
+            else
+            {
+                string a = StOc.Text, b = StPo.Text, c = StGr.Text, d = StName.Text;
+                if (((a[1] != ' ') || (b[1] == ' ')||(c[1]==' ')||(d[1]==' ')) && ((a.Length > 0) || (b.Length > 0)))
+                    MessageBox.Show("Проверьте правильность заполнения окон");
+                else
+                {
+                    FileStream Studentss = new FileStream("Lerner.txt", FileMode.Append, FileAccess.Write);
+                    StreamWriter writer1 = new StreamWriter(Studentss);
+                    writer1.WriteLine();
+                    writer1.Write(d+" "+c);
+                    writer1.Close();
+                    Studentss.Close();
+                    FileStream Ocenka = new FileStream("Ergebnisse.txt", FileMode.Append, FileAccess.Write);
+                    StreamWriter writer2 = new StreamWriter(Ocenka);
+                    writer2.WriteLine();
+                    writer2.Write(a);
+                    writer2.Close();
+                    Ocenka.Close();
+                    FileStream Poseh = new FileStream("Teilnahme.txt", FileMode.Append, FileAccess.Write);
+                    StreamWriter writer3 = new StreamWriter(Poseh);
+                    writer3.WriteLine();
+                    writer3.Write(b);
+                    writer3.Close();
+                    Poseh.Close();
+                    StName.Text = "";
+                    StGr.Text = "";
+                    StOc.Text = "";
+                    StPo.Text = "";
+                }
             }
         }
     }
