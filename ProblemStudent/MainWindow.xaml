@@ -5,17 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProblemStudent"
         mc:Ignorable="d"
-        Title="Успеваемость студентов" Height="600" Width="1000">
+        Title="Успеваемость студентов" Height="800" Width="1000">
     <Grid Margin="0,0,-6.4,-0.6">
-        <ListView Name ="PrSt" HorizontalAlignment="Left" Height="342" VerticalAlignment="Top" Width="312" Margin="614,88,0,0">
-        </ListView>
-        <Label Content="Проблемные студенты" HorizontalAlignment="Left" Height="34" Margin="710,26,0,0" VerticalAlignment="Top" Width="144"/>
-        <Button Name ="ShowAll" Content="Показать" HorizontalAlignment="Left" Height="34" Margin="78,468,0,0" VerticalAlignment="Top" Width="144" Click="Button_Click"/>
-        <Calendar HorizontalAlignment="Left" Height="180" Margin="362,104,0,0" VerticalAlignment="Top" Width="198"/>
-        <Button Name="Transfer" Content="Отправить в деканат" HorizontalAlignment="Left" Height="34" Margin="726,468,0,0" VerticalAlignment="Top" Width="142" Click="Transfer_Click"/>
-        <ListView Name ="AllStudent" HorizontalAlignment="Left" Height="342" Margin="26,88,0,0" VerticalAlignment="Top" Width="294">
-        </ListView>
-        <Label Content="Студенты" HorizontalAlignment="Left" Margin="95,26,0,0" VerticalAlignment="Top" Height="34" Width="102"/>
-        <Button Name ="MakeO" Content="Составить отчёт" HorizontalAlignment="Left" Height="66" Margin="378,364,0,0" VerticalAlignment="Top" Width="166" Click="MakeO_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="337" Margin="28,77,0,0" VerticalAlignment="Top" Width="290"/>
+        <ListView x:Name ="PrSt" HorizontalAlignment="Left" Height="337" VerticalAlignment="Top" Width="312" Margin="654,77,0,0"/>
+        <Label Content="Проблемные студенты" HorizontalAlignment="Left" Height="30" Margin="654,42,0,0" VerticalAlignment="Top" Width="145"/>
+        <Button x:Name ="ShowAll" Content="Показать" HorizontalAlignment="Left" Height="35" Margin="486,414,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
+        <Calendar HorizontalAlignment="Left" Height="180" Margin="26,483,0,0" VerticalAlignment="Top" Width="198"/>
+        <Button x:Name="Transfer" Content="Отправить в деканат" HorizontalAlignment="Left" Height="35" Margin="821,413,0,0" VerticalAlignment="Top" Width="145" Click="Transfer_Click"/>
+        <ListView x:Name ="AllStudent" HorizontalAlignment="Left" Height="337" Margin="337,77,0,0" VerticalAlignment="Top" Width="294"/>
+        <Label Content="Студенты" HorizontalAlignment="Left" Margin="337,42,0,0" VerticalAlignment="Top" Height="30" Width="65"/>
+        <Button x:Name ="MakeO" Content="Составить отчёт" HorizontalAlignment="Left" Height="35" Margin="50,663,0,0" VerticalAlignment="Top" Width="145" Click="MakeO_Click"/>
+        <TextBox Name="StGr" HorizontalAlignment="Left" Height="23" Margin="161,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="StOc" HorizontalAlignment="Left" Height="23" Margin="161,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="StPo" HorizontalAlignment="Left" Height="23" Margin="161,332,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Добавление студента" HorizontalAlignment="Left" Margin="28,42,0,0" VerticalAlignment="Top" Width="130" Height="30"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="173,413,0,0" VerticalAlignment="Top" Width="145" Height="35" Click="Button_Click_1"/>
+        <Label Content="Группа" HorizontalAlignment="Left" Margin="50,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Оценки" HorizontalAlignment="Left" Margin="50,213,0,0" VerticalAlignment="Top"/>
+        <Label Content="Посещаемость" HorizontalAlignment="Left" Margin="50,328,0,0" VerticalAlignment="Top"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="50,99,0,0" VerticalAlignment="Top"/>
+        <TextBox Name ="StName"  HorizontalAlignment="Left" Height="23" Margin="161,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Вводить списком, разделяя пробелом" HorizontalAlignment="Left" Margin="50,244,0,0" VerticalAlignment="Top" Height="30" Width="230"/>
+        <Label Content="Вводить списком слитно + и -" HorizontalAlignment="Left" Margin="50,359,0,0" VerticalAlignment="Top"/>
+        <DataGrid HorizontalAlignment="Left" Height="215" Margin="337,483,0,0" VerticalAlignment="Top" Width="629"/>
     </Grid>
 </Window>
